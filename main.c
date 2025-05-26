@@ -16,13 +16,13 @@
 
 static int explanation(void)
 {
-    printf("[MY_RAYTRACER]\n\t-h shows this help message\n");
-    printf("\t-s loads previous map that you played\n");
-    printf("a basic raycaster program\n");
+    printf("[WOLF3D]\n\t-h shows this help message\n");
+    printf("\na basic raycaster program\n\n");
     printf("USAGE: \n\t");
-    printf("./wolf3d\n\t");
+    printf("./wolf3d\n");
     printf("OPTION\n");
-    printf("\t-h\tprint the usage and quit\nUSER INTERACTIONS\n");
+    printf("\t-h\tprint the usage and quit\n");
+    printf("\t-s loads previous map that you played\nUSER INTERACTIONS\n");
     printf("\t'Mouse1' or 'Enter' key\tuse weapon\n");
     printf("\t'1' key\tswitch to knife\n");
     printf("\t'2' key\tswitch to pistol\n");
