@@ -1,6 +1,6 @@
 # bootstrap_raycasting
 
-a very fast way of detemining how raytracing works
+a very fast way of detemining how raycasting works
 
 ## Build
 
@@ -12,22 +12,21 @@ To compile the binary:
 
 The compiled binary will be called:
 
-    raytrace
+    wolf3d
 
 ## Usage
 
 To run the program:
 
-    ./raytrace
+    ./wolf3d
 
 To show the help message:
 
-    ./my_radar -h
+    ./wolf3d -h
 
 ## Description
 
 - The player moves in a 2d array
-- You can change the map in map_create.c
 - You cannot go outside the map
 - You can change how big the map is in struct.h
 

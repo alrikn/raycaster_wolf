@@ -41,7 +41,7 @@ sfRenderWindow* create_window(void)
 {
     sfVideoMode video_mode = {SCREEN_WIDTH, SCREEN_HEIGHT, 32};
 
-    return sfRenderWindow_create(video_mode, "Raytracer",
+    return sfRenderWindow_create(video_mode, "Raytcaster",
     sfClose | sfResize, 0);
 }
 
