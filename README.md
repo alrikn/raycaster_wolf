@@ -1,6 +1,6 @@
-# bootstrap_raycasting
+# wolf3d
 
-a very fast way of detemining how raycasting works
+a mini wolfenstein look alike
 
 ## Build
 
@@ -29,6 +29,8 @@ To show the help message:
 - The player moves in a 2d array
 - You cannot go outside the map
 - You can change how big the map is in struct.h
+- every map is randomly generated but there are only 10 enemies at any time. (you can change this in struct.h)
+- the metadata is kept in the file called stats and save_file
 
 ## Disclaimer
 

@@ -17,6 +17,7 @@
 static int explanation(void)
 {
     printf("[MY_RAYTRACER]\n\t-h shows this help message\n");
+    printf("\t-s loads previous map that you played\n");
     printf("a basic raycaster program\n");
     printf("USAGE: \n\t");
     printf("./wolf3d\n\t");
