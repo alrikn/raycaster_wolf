@@ -1,0 +1,13 @@
+*.o
+*.a
+raytrace
+recode.c
+*.txt
+*.log
+*.out
+handle_rays_old.c
+*.test
+wolf3d
+test*
+save_file
+stats
