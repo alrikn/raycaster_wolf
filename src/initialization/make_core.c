@@ -115,6 +115,16 @@ static void dog_bark_sound(core_t *core)
     sfSound_setBuffer(core->sound.dog_sound, core->sound.dog_buffer);
 }
 
+static void knife_swish_sound(core_t *core)
+{
+    core->sound.knife_buffer = sfSoundBuffer_createFromFile
+    ("assets/knife_swish.ogg");
+    if (!core->sound.knife_buffer)
+        return;
+    core->sound.knife_sound = sfSound_create();
+    sfSound_setBuffer(core->sound.knife_sound, core->sound.knife_buffer);
+}
+
 /*
 ** TODO: set the volume
 */
@@ -139,6 +149,7 @@ void initialize_sound(core_t *core)
     core->sound.shoot_sound = sfSound_create();
     sfSound_setBuffer(core->sound.shoot_sound, core->sound.shoot_buffer);
     dog_bark_sound(core);
+    knife_swish_sound(core);
 }
 
 void create_enemies(core_t *core)

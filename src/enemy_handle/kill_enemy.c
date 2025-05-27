@@ -101,15 +101,16 @@ void player_attack(core_t *core)
         core->player.shooting = true;
         sfSound_play(core->sound.shoot_sound);
     }
-    if (core->player.wp == WP_KNIFE)
+    if (core->player.wp == WP_KNIFE) {
         core->player.shooting = true;
+        sfSound_play(core->sound.knife_sound);
+    }
     while (enemy) {
         if (!((enemy_info_t *)(enemy->context->info))->dead &&
         ((enemy_info_t *)enemy->context->info)->activated &&
         !((enemy_info_t *)enemy->context->info)->dying &&
-        can_shoot_enemy(enemy, core)) {
+        can_shoot_enemy(enemy, core))
             break;
-        }
         enemy = enemy->next;
     }
 }

@@ -48,6 +48,10 @@ static void destroy_sounds(core_t *core)
         sfSound_destroy(core->sound.dog_sound);
     if (core->sound.dog_buffer)
         sfSoundBuffer_destroy(core->sound.dog_buffer);
+    if (core->sound.knife_sound)
+        sfSound_destroy(core->sound.knife_sound);
+    if (core->sound.knife_buffer)
+        sfSoundBuffer_destroy(core->sound.knife_buffer);
 }
 
 static void destroy_night(core_t *core)
