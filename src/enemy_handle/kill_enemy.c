@@ -9,6 +9,7 @@
 #include "my.h"
 #include "struct.h"
 #include <SFML/Audio/Sound.h>
+#include <SFML/Audio/SoundStatus.h>
 #include <math.h>
 
 static float set_angle_diff(vision_t *vision, enemy_list_t *enemy)
@@ -103,7 +104,8 @@ void player_attack(core_t *core)
     }
     if (core->player.wp == WP_KNIFE) {
         core->player.shooting = true;
-        sfSound_play(core->sound.knife_sound);
+        if (sfSound_getStatus(core->sound.knife_sound) != sfPlaying)
+            sfSound_play(core->sound.knife_sound);
     }
     while (enemy) {
         if (!((enemy_info_t *)(enemy->context->info))->dead &&
