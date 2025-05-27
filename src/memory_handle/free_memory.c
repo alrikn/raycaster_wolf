@@ -44,6 +44,10 @@ static void destroy_sounds(core_t *core)
         sfSound_destroy(core->sound.walk_sound);
     if (core->sound.background_music)
         sfMusic_destroy(core->sound.background_music);
+    if (core->sound.dog_sound)
+        sfSound_destroy(core->sound.dog_sound);
+    if (core->sound.dog_buffer)
+        sfSoundBuffer_destroy(core->sound.dog_buffer);
 }
 
 static void destroy_night(core_t *core)

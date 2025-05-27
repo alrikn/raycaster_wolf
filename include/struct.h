@@ -152,6 +152,8 @@ typedef struct sounds {
     sfSound* walk_sound; //continuous sound
     sfSoundBuffer* shoot_buffer; //one shot sound
     sfSound* shoot_sound; //one shot sound
+    sfSoundBuffer* dog_buffer; //one shot sound
+    sfSound* dog_sound; //one shot sound
     sfSoundBuffer* button_volume_buffer; //one shot sound
     sfSound* button_volume_sound; //one shot sound
 } sound_t;

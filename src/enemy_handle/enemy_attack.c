@@ -17,6 +17,7 @@ void can_swipe(enemy_info_t *info, core_t *core)
         if (info->weapon_cooldown >= 80) {
             info->weapon_cooldown = 0;
             info->main_player->health -= 30;
+            sfSound_play(core->sound.dog_sound);
         }
 }
 

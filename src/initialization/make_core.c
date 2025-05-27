@@ -105,6 +105,16 @@ static void make_night(core_t *core)
     core->meta.night_tex = night_tex;
 }
 
+static void dog_bark_sound(core_t *core)
+{
+    core->sound.dog_buffer = sfSoundBuffer_createFromFile
+    ("assets/dog_bark.ogg");
+    if (!core->sound.dog_buffer)
+        return;
+    core->sound.dog_sound = sfSound_create();
+    sfSound_setBuffer(core->sound.dog_sound, core->sound.dog_buffer);
+}
+
 /*
 ** TODO: set the volume
 */
@@ -128,6 +138,7 @@ void initialize_sound(core_t *core)
         return;
     core->sound.shoot_sound = sfSound_create();
     sfSound_setBuffer(core->sound.shoot_sound, core->sound.shoot_buffer);
+    dog_bark_sound(core);
 }
 
 void create_enemies(core_t *core)
