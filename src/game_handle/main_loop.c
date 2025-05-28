@@ -75,7 +75,7 @@ void limit_frame_hard(core_t *core)
     time = sfClock_getElapsedTime(core->frame.tick);
     frame = sfTime_asMilliseconds(time);
     if (frame > TPS)
-        printf("TPS Higher Than Expected: %lld\n", frame);
+        printf("framerate lower than expects: %lld\n", frame);
     while (frame <= TPS) {
         time = sfClock_getElapsedTime(core->frame.tick);
         frame = sfTime_asMilliseconds(time);

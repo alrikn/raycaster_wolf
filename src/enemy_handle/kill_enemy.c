@@ -60,10 +60,12 @@ static bool loop_handle(vision_t *vision, int column, enemy_list_t *enemy)
         if (hold.sprite_dist < vision->all_rays[column].full_dist)
             seen = true;
     }
-    return (seen && !((enemy_info_t *)enemy->context->info)->dying &&
-        !((enemy_info_t *)enemy->context->info)->dead);
+    return seen;
 }
 
+/*
+** contray to expectation, here we check all invalid possibilities
+*/
 bool valid_shot(enemy_list_t *enemy, core_t *core)
 {
     if (core->player.wp == WP_PISTOL && core->player.ammo <= 0) {
