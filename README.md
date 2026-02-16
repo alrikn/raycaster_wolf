@@ -2,6 +2,8 @@
 
 a mini wolfenstein look alike
 
+![Screenshot](assets/Screenshot.png)
+
 ## Build
 
 To compile the binary:
